@@ -1,13 +1,13 @@
-1. Bean ¿¡¼­ »ç¿ëÀÚ Á¤º¸ °¡Á®¿À´Â ¹æ¹ı
+1. Bean ì—ì„œ ì‚¬ìš©ì ì •ë³´ ê°€ì ¸ì˜¤ëŠ” ë°©ë²•
 
-°¡Àå °£´ÜÇÑ ¹æ¹ıÀº Àü¿ª¿¡ ¼±¾ğµÈ SecurityContextHolderÀ» ÀÌ¿ë
+ê°€ì¥ ê°„ë‹¨í•œ ë°©ë²•ì€ ì „ì—­ì— ì„ ì–¸ëœ SecurityContextHolderì„ ì´ìš©
 
 Principal principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal(); 
 UserDetails userDetails = (UserDetails)principal; 
 String username = principal.getUsername(); 
 String password = principal.getPassword();
 
-1. Controller ¿¡¼­ »ç¿ëÀÚ Á¤º¸ °¡Á®¿À´Â ¹æ¹ı
+1. Controller ì—ì„œ ì‚¬ìš©ì ì •ë³´ ê°€ì ¸ì˜¤ëŠ” ë°©ë²•
 @Controller 
 public class SecurityController { @GetMapping("/username") 
 @ResponseBody public String currentUserName(Principal principal) { return principal.getName(); } }
